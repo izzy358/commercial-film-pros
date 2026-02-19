@@ -1,5 +1,7 @@
 :root {
-    --color-black: #1a1a1a; /* Dark charcoal */
+    --color-deep-navy: #1e3a5f;
+    --color-medium-navy: #2c5282;
+    --color-black: #1a1a1a; /* Dark charcoal - keeping for now, will replace usage */
     --color-white: #FFFFFF;
     --color-orange-start: #D94E1F;
     --color-orange-mid: #E8651A;
@@ -24,7 +26,7 @@ body {
     font-family: var(--font-primary);
     line-height: 1.6;
     color: var(--color-white);
-    background-color: var(--color-black);
+    background-color: var(--color-deep-navy);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
@@ -136,7 +138,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Header */
 .main-header {
-    background-color: rgba(26, 26, 26, 0.9);
+    background-color: rgba(30, 58, 95, 0.9);
     padding: 1rem 0;
     position: fixed;
     width: 100%;
@@ -203,7 +205,7 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, #1a1a1a, #2b2b2b, #1a1a1a); /* Subtle gradient */
+    background: linear-gradient(135deg, var(--color-deep-navy), var(--color-medium-navy), var(--color-deep-navy)); /* Subtle navy gradient */
     background-size: 400% 400%; /* Make the gradient larger for animation */
     z-index: -1;
     animation: gradient-animation 15s ease infinite; /* New animation */
@@ -278,7 +280,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Stats Section */
 .stats-section {
-    background-color: var(--color-black);
+    background-color: var(--color-deep-navy);
     padding: 5rem 0;
     text-align: center;
     border-top: 1px solid rgba(255,255,255,0.05);
@@ -293,13 +295,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .stat-item {
     padding: 1.5rem;
-    background-color: rgba(255, 255, 255, 0.03);
+    background-color: rgba(44, 82, 130, 0.1);
     border-radius: 10px;
     transition: background-color 0.3s ease;
 }
 
 .stat-item:hover {
-    background-color: rgba(255, 255, 255, 0.08);
+    background-color: rgba(44, 82, 130, 0.2);
 }
 
 .stat-number {
@@ -324,7 +326,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Services Section */
 .services-section {
     padding: 8rem 0;
-    background-color: var(--color-black);
+    background-color: var(--color-deep-navy);
 }
 
 .services-grid {
@@ -334,7 +336,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .service-card {
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--color-medium-navy);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 15px;
     padding: 3rem 2rem;
@@ -407,7 +409,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Why Choose Us Section */
 .choose-us-section {
     padding: 8rem 0;
-    background-color: #0d0d0d;
+    background-color: var(--color-deep-navy);
 }
 
 .benefits-grid {
@@ -417,7 +419,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .benefit-item {
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--color-medium-navy);
     border-radius: 15px;
     padding: 2.5rem;
     position: relative;
@@ -426,7 +428,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .benefit-item:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(44, 82, 130, 0.7);
     transform: translateY(-5px);
 }
 
@@ -453,7 +455,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Industries We Serve Section */
 .industries-section {
     padding: 8rem 0;
-    background-color: var(--color-black);
+    background-color: var(--color-deep-navy);
 }
 
 .industries-grid {
@@ -463,7 +465,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .industry-card {
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: var(--color-medium-navy);
     background-size: cover;
     background-position: center;
     border-radius: 15px;
@@ -500,7 +502,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Process Section */
 .process-section {
     padding: 8rem 0;
-    background-color: #0d0d0d;
+    background-color: var(--color-deep-navy);
 }
 
 .process-timeline {
@@ -528,7 +530,7 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
     position: relative;
     z-index: 1;
-    background-color: #0d0d0d;
+    background-color: var(--color-deep-navy);
     padding: 1rem;
 }
 
@@ -570,7 +572,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Testimonials Section */
 .testimonials-section {
     padding: 8rem 0;
-    background-color: var(--color-black);
+    background-color: var(--color-deep-navy);
 }
 
 .testimonials-carousel {
@@ -580,7 +582,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .testimonial-card {
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--color-medium-navy);
     border-radius: 15px;
     padding: 3rem;
     position: relative;
@@ -626,7 +628,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* CTA Banner Section */
 .cta-banner-section {
-    background: linear-gradient(90deg, #1A1A1A, var(--color-black));
+    background: linear-gradient(90deg, var(--color-deep-navy), var(--color-medium-navy));
     padding: 6rem 0;
     text-align: center;
     border-top: 1px solid rgba(255,255,255,0.05);
@@ -643,7 +645,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Contact Form Section */
 .contact-section {
     padding: 8rem 0;
-    background-color: #0d0d0d;
+    background-color: var(--color-deep-navy);
 }
 
 .contact-form {
@@ -653,7 +655,7 @@ h1, h2, h3, h4, h5, h6 {
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     padding: 3rem;
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--color-medium-navy);
     border-radius: 15px;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -671,7 +673,7 @@ h1, h2, h3, h4, h5, h6 {
 .contact-form input, .contact-form textarea, .contact-form select {
     width: 100%;
     padding: 1rem;
-    background-color: rgba(255, 255, 255, 0.08);
+    background-color: rgba(44, 82, 130, 0.5);
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 8px;
     color: var(--color-white);
@@ -704,7 +706,7 @@ h1, h2, h3, h4, h5, h6 {
 .contact-form select:valid + label {
     transform: translateY(-130%) scale(0.8);
     color: var(--color-orange-end);
-    background-color: #0d0d0d;
+    background-color: var(--color-deep-navy);
     padding: 0 0.5rem;
     left: 0.8rem;
 }
@@ -713,7 +715,7 @@ h1, h2, h3, h4, h5, h6 {
 .contact-form select:valid + label {
     transform: translateY(-130%) scale(0.8);
     color: var(--color-orange-end);
-    background-color: #0d0d0d;
+    background-color: var(--color-deep-navy);
     padding: 0 0.5rem;
     left: 0.8rem;
 }
@@ -743,7 +745,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Footer */
 .main-footer {
-    background-color: var(--color-black);
+    background-color: var(--color-deep-navy);
     padding: 4rem 0;
     text-align: center;
     border-top: 1px solid rgba(255,255,255,0.05);
@@ -821,18 +823,18 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 768px) {
     .main-header .container {
-        flex-direction: column;
-        gap: 1rem;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0; /* Reset gap */
     }
 
-    .main-nav ul {
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 1rem;
+    .main-nav {
+        display: none;
     }
 
     .header-cta {
-        display: none;
+        display: block; /* Ensure CTA is visible */
     }
 
     .hero-headline {
