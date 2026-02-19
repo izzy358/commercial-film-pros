@@ -1,0 +1,276 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Swatches - Commercial Film Pros</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            background-color: #1a1a1a; /* Default dark background for the page itself */
+            color: #FFFFFF;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .palette-option {
+            width: 100%;
+            max-width: 450px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            flex-shrink: 0;
+            flex-grow: 1;
+        }
+
+        .palette-option:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .palette-header {
+            padding: 20px;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 1.4rem;
+            font-weight: 700;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .mockup-section {
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            min-height: 400px;
+            position: relative;
+        }
+
+        .card-element {
+            background-color: var(--card-color);
+            border-radius: 8px;
+            padding: 25px;
+            color: #FFFFFF; /* White text for contrast */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 25px;
+            background-color: var(--card-color);
+            border-radius: 8px;
+            margin-bottom: 20px;
+            color: #FFFFFF;
+        }
+        .nav-bar .logo {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: #FFFFFF;
+        }
+        .nav-bar .nav-links a {
+            color: #FFFFFF;
+            text-decoration: none;
+            margin-left: 20px;
+            transition: color 0.2s ease;
+        }
+        .nav-bar .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .hero-text h1 {
+            font-size: 2.8rem;
+            font-weight: 900;
+            margin-bottom: 10px;
+            color: #FFFFFF;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        .hero-text p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-align: center;
+            text-decoration: none;
+            background-color: var(--accent-color);
+            color: #FFFFFF;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+            box-shadow: 0 5px 15px rgba(var(--accent-rgb), 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            background-color: color-mix(in srgb, var(--accent-color) 80%, black);
+        }
+
+        .color-label {
+            margin-top: 15px;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        .color-label span {
+            font-weight: 600;
+            color: #FFFFFF;
+        }
+
+        @media (max-width: 768px) {
+            .palette-option {
+                max-width: none;
+            }
+            .nav-bar {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .nav-bar .nav-links {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .nav-bar .nav-links a {
+                margin: 5px 10px;
+            }
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+            .hero-text p {
+                font-size: 1rem;
+            }
+            .cta-button {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="palette-option" style="--bg-color: #2d3748; --card-color: #4a5568; --accent-color: #F47B20; --accent-rgb: 244, 123, 32;">
+        <div class="palette-header" style="background-color: var(--bg-color);">Option A — Slate + Orange</div>
+        <div class="mockup-section" style="background-color: var(--bg-color);">
+            <div class="nav-bar">
+                <div class="logo">CFP</div>
+                <div class="nav-links">
+                    <a href="#">Home</a>
+                    <a href="#">Services</a>
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+            <div class="hero-text">
+                <h1>Crafting Visual Stories</h1>
+                <p>Award-winning commercial film production for leading brands.</p>
+                <button class="cta-button">Learn More</button>
+            </div>
+            <div class="card-element">
+                <h3>Our Vision</h3>
+                <p>We believe in the power of compelling visuals to elevate your brand's message. <span style="color: var(--accent-color);">Discover how we can transform your ideas into stunning cinematic experiences.</span></p>
+                <button class="cta-button" style="margin-top: 15px;">Get a Quote</button>
+            </div>
+            <div class="color-label">Background: <span>#2d3748</span></div>
+            <div class="color-label">Cards: <span>#4a5568</span></div>
+            <div class="color-label">Accent: <span style="color: var(--accent-color);">#F47B20</span></div>
+        </div>
+    </div>
+
+    <div class="palette-option" style="--bg-color: #3d3d3d; --card-color: #4f4f4f; --accent-color: #F47B20; --accent-rgb: 244, 123, 32;">
+        <div class="palette-header" style="background-color: var(--bg-color);">Option B — Warm Gray + Orange</div>
+        <div class="mockup-section" style="background-color: var(--bg-color);">
+            <div class="nav-bar">
+                <div class="logo">CFP</div>
+                <div class="nav-links">
+                    <a href="#">Home</a>
+                    <a href="#">Services</a>
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+            <div class="hero-text">
+                <h1>Crafting Visual Stories</h1>
+                <p>Award-winning commercial film production for leading brands.</p>
+                <button class="cta-button">Learn More</button>
+            </div>
+            <div class="card-element">
+                <h3>Our Vision</h3>
+                <p>We believe in the power of compelling visuals to elevate your brand's message. <span style="color: var(--accent-color);">Discover how we can transform your ideas into stunning cinematic experiences.</span></p>
+                <button class="cta-button" style="margin-top: 15px;">Get a Quote</button>
+            </div>
+            <div class="color-label">Background: <span>#3d3d3d</span></div>
+            <div class="color-label">Cards: <span>#4f4f4f</span></div>
+            <div class="color-label">Accent: <span style="color: var(--accent-color);">#F47B20</span></div>
+        </div>
+    </div>
+
+    <div class="palette-option" style="--bg-color: #1e3a5f; --card-color: #2c5282; --accent-color: #F47B20; --accent-rgb: 244, 123, 32;">
+        <div class="palette-header" style="background-color: var(--bg-color);">Option C — Navy + Orange</div>
+        <div class="mockup-section" style="background-color: var(--bg-color);">
+            <div class="nav-bar">
+                <div class="logo">CFP</div>
+                <div class="nav-links">
+                    <a href="#">Home</a>
+                    <a href="#">Services</a>
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+            <div class="hero-text">
+                <h1>Crafting Visual Stories</h1>
+                <p>Award-winning commercial film production for leading brands.</p>
+                <button class="cta-button">Learn More</button>
+            </div>
+            <div class="card-element">
+                <h3>Our Vision</h3>
+                <p>We believe in the power of compelling visuals to elevate your brand's message. <span style="color: var(--accent-color);">Discover how we can transform your ideas into stunning cinematic experiences.</span></p>
+                <button class="cta-button" style="margin-top: 15px;">Get a Quote</button>
+            </div>
+            <div class="color-label">Background: <span>#1e3a5f</span></div>
+            <div class="color-label">Cards: <span>#2c5282</span></div>
+            <div class="color-label">Accent: <span style="color: var(--accent-color);">#F47B20</span></div>
+        </div>
+    </div>
+
+    <div class="palette-option" style="--bg-color: #374151; --card-color: #4b5563; --accent-color: #F47B20; --accent-rgb: 244, 123, 32;">
+        <div class="palette-header" style="background-color: var(--bg-color);">Option D — Charcoal Light + Orange</div>
+        <div class="mockup-section" style="background-color: var(--bg-color);">
+            <div class="nav-bar">
+                <div class="logo">CFP</div>
+                <div class="nav-links">
+                    <a href="#">Home</a>
+                    <a href="#">Services</a>
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+            <div class="hero-text">
+                <h1>Crafting Visual Stories</h1>
+                <p>Award-winning commercial film production for leading brands.</p>
+                <button class="cta-button">Learn More</button>
+            </div>
+            <div class="card-element">
+                <h3>Our Vision</h3>
+                <p>We believe in the power of compelling visuals to elevate your brand's message. <span style="color: var(--accent-color);">Discover how we can transform your ideas into stunning cinematic experiences.</span></p>
+                <button class="cta-button" style="margin-top: 15px;">Get a Quote</button>
+            </div>
+            <div class="color-label">Background: <span>#374151</span></div>
+            <div class="color-label">Cards: <span>#4b5563</span></div>
+            <div class="color-label">Accent: <span style="color: var(--accent-color);">#F47B20</span></div>
+        </div>
+    </div>
+
+</body>
+</html>
