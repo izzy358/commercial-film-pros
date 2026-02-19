@@ -629,3 +629,44 @@ footer .footer-info p {
         padding: 0 10px;
     }
 }
+
+/* Animations */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes heroFadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Apply animations */
+h2 {
+    animation: fadeUp 0.8s ease-out forwards;
+}
+
+#hero .hero-content h1 {
+    animation: heroFadeInLeft 1s ease-out forwards;
+}
+
+#hero .hero-content .subtitle {
+    animation: fadeUp 0.8s ease-out 0.2s forwards;
+}
+
+#hero .trust-badges span {
+    animation: fadeUp 0.8s ease-out 0.4s forwards;
+}
+
