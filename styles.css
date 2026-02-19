@@ -198,26 +198,6 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
 }
 
-
-.hero-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, var(--color-deep-navy), var(--color-medium-navy), var(--color-deep-navy)); /* Subtle navy gradient */
-    background-size: 400% 400%; /* Make the gradient larger for animation */
-    z-index: -1;
-    animation: gradient-animation 15s ease infinite; /* New animation */
-}
-
-@keyframes gradient-animation {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-
 .hero-content {
     position: relative;
     z-index: 2;
@@ -933,5 +913,44 @@ h1, h2, h3, h4, h5, h6 {
 
     .cta-banner-section h2 {
         font-size: 2rem;
+    }
+}
+
+/* Hero Video Background */
+.hero-background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: 0; /* Behind content */
+}
+
+/* Hero Overlay */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(30, 58, 95, 0.65); /* Dark navy with 65% opacity */
+    z-index: 1; /* Between video and content */
+}
+
+/* Ensure hero content stays on top */
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Responsive: Hide video on small screens */
+@media (max-width: 768px) {
+    .hero-background-video, .hero-overlay {
+        display: none;
+    }
+    .hero-section {
+        background: linear-gradient(135deg, var(--color-deep-navy), var(--color-medium-navy), var(--color-deep-navy)); /* Fallback gradient */
     }
 }
