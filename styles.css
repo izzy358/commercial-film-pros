@@ -121,8 +121,9 @@ header .logo img {
 
 /* Hero Section */
 #hero {
-    background: linear-gradient(to right, var(--white), var(--light-gray));
+    background: linear-gradient(rgba(30, 58, 95, 0.75), rgba(30, 58, 95, 0.75)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=80') center/cover no-repeat;
     padding: 80px 0;
+    color: var(--white);
 }
 
 #hero .container {
@@ -133,6 +134,11 @@ header .logo img {
 
 #hero .hero-content {
     flex: 2;
+    color: var(--white);
+}
+
+#hero .hero-content h1 {
+    color: var(--white);
 }
 
 #hero .hero-content .subtitle {
