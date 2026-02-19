@@ -38,8 +38,30 @@ const observer = new IntersectionObserver((entries, observer) => {
     });
 }, observerOptions);
 
+
+// Function to check if an element is in viewport
+function isInViewport(element, threshold = 0) {
+    const rect = element.getBoundingClientRect();
+    return (
+        rect.top <= (window.innerHeight || document.documentElement.clientHeight) * (1 - threshold) &&
+        rect.left <= (window.innerWidth || document.documentElement.clientWidth) * (1 - threshold) &&
+        rect.bottom >= (window.innerHeight || document.documentElement.clientHeight) * threshold &&
+        rect.right >= (window.innerWidth || document.documentElement.clientWidth) * threshold
+    );
+}
+
 revealElements.forEach(el => {
-    observer.observe(el);
+    // Check if element is already in viewport on load
+    if (isInViewport(el, observerOptions.threshold)) {
+        el.classList.add('active');
+        // If it's a service card, apply staggered delay immediately
+        if (el.classList.contains('service-card')) {
+            const index = Array.from(document.querySelectorAll('.services-grid .service-card')).indexOf(el);
+            el.style.transitionDelay = `${index * 0.15}s`;
+        }
+    } else {
+        observer.observe(el);
+    }
 });
 
 // Hero text staggered reveal animation
@@ -60,38 +82,34 @@ function animateHeroText() {
         span.style.display = 'inline-block';
         span.style.transition = `opacity 0.6s ease-out ${index * 0.1}s, transform 0.6s ease-out ${index * 0.1}s`;
         headline.appendChild(span);
-        setTimeout(() => {
-            span.style.opacity = 1;
-            span.style.transform = 'translateY(0)';
-        }, 50);
+        // Removed setTimeout here to let CSS transitions handle it immediately on append
+        span.style.opacity = 1;
+        span.style.transform = 'translateY(0)';
     });
 
     // Animate subtitle
     subtitle.style.opacity = 0;
     subtitle.style.transform = 'translateY(20px)';
     subtitle.style.transition = 'opacity 0.8s ease-out 0.8s, transform 0.8s ease-out 0.8s';
-    setTimeout(() => {
-        subtitle.style.opacity = 1;
-        subtitle.style.transform = 'translateY(0)';
-    }, 50);
+    // Removed setTimeout
+    subtitle.style.opacity = 1;
+    subtitle.style.transform = 'translateY(0)';
 
     // Animate CTA button
     cta.style.opacity = 0;
     cta.style.transform = 'translateY(20px)';
     cta.style.transition = 'opacity 0.8s ease-out 1.2s, transform 0.8s ease-out 1.2s';
-    setTimeout(() => {
-        cta.style.opacity = 1;
-        cta.style.transform = 'translateY(0)';
-    }, 50);
+    // Removed setTimeout
+    cta.style.opacity = 1;
+    cta.style.transform = 'translateY(0)';
 
     // Animate Trust Badges
     badges.style.opacity = 0;
     badges.style.transform = 'translateY(20px)';
     badges.style.transition = 'opacity 0.8s ease-out 1.5s, transform 0.8s ease-out 1.5s';
-    setTimeout(() => {
-        badges.style.opacity = 1;
-        badges.style.transform = 'translateY(0)';
-    }, 50);
+    // Removed setTimeout
+    badges.style.opacity = 1;
+    badges.style.transform = 'translateY(0)';
 }
 
 // Counter animation for stats bar
