@@ -516,13 +516,43 @@ header .logo img {
     text-align: left;
 }
 
+#contact .contact-info h3 {
+    font-size: 1.8em;
+    color: var(--secondary-navy);
+    margin-bottom: 15px;
+}
+
+#contact .contact-info .contact-desc {
+    font-size: 1.15em;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+#contact .contact-detail {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: var(--light-gray);
+    border-radius: 8px;
+}
+
+#contact .contact-detail .contact-icon {
+    font-size: 1.5em;
+}
+
+#contact .contact-detail strong {
+    color: var(--secondary-navy);
+    font-size: 0.95em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
 #contact .contact-info p {
     font-size: 1.1em;
     line-height: 1.8;
-}
-
-#contact .contact-info strong {
-    color: var(--secondary-navy);
 }
 
 #contact .contact-form {
