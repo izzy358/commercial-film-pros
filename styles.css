@@ -104,7 +104,7 @@ header .logo img {
 
 .header-cta-btn {
     display: inline-block;
-    background: var(--accent-orange);
+    background: var(--primary-orange);
     color: var(--white);
     padding: 12px 28px;
     border-radius: 6px;
