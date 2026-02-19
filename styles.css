@@ -143,12 +143,13 @@ header .logo img {
 
 #hero .hero-content .subtitle {
     font-size: 1.3em;
-    color: #555;
+    color: rgba(255, 255, 255, 0.9);
     margin-bottom: 25px;
 }
 
 #hero .trust-badges span {
-    background: var(--secondary-navy);
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     color: var(--white);
     padding: 8px 15px;
     border-radius: 5px;
