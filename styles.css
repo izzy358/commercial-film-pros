@@ -99,13 +99,24 @@ header .container {
 }
 
 header .logo img {
-    height: 60px; /* Adjust as needed */
+    height: 120px;
 }
 
-header .phone-number span {
-    font-size: 1.4em;
+.header-cta-btn {
+    display: inline-block;
+    background: var(--accent-orange);
+    color: var(--white);
+    padding: 12px 28px;
+    border-radius: 6px;
+    font-size: 1.1em;
     font-weight: 700;
-    color: var(--secondary-navy);
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.header-cta-btn:hover {
+    background: #c74a1a;
+    color: var(--white);
 }
 
 /* Hero Section */
