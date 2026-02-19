@@ -596,25 +596,66 @@ header .logo img {
 footer {
     background: var(--secondary-navy);
     color: var(--white);
-    padding: 40px 0;
-    text-align: center;
+    padding: 60px 0 20px;
 }
 
-footer .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
 }
 
-footer .footer-logo img {
+.footer-brand .footer-logo-img {
     height: 50px;
-    filter: brightness(0) invert(1); /* Makes SVG white */
+    filter: brightness(0) invert(1);
+    margin-bottom: 15px;
 }
 
-footer .footer-info p {
-    margin: 5px 0;
+.footer-brand p {
     font-size: 0.95em;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.7;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    color: var(--primary-orange);
+}
+
+.footer-links ul,
+.footer-contact ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li,
+.footer-contact li {
+    margin-bottom: 10px;
+    font-size: 0.95em;
+    color: rgba(255,255,255,0.7);
+}
+
+.footer-links a,
+.footer-contact a {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover,
+.footer-contact a:hover {
+    color: var(--white);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.15);
+    padding-top: 20px;
+    text-align: center;
+    font-size: 0.9em;
+    color: rgba(255,255,255,0.5);
 }
 
 /* Mobile Responsiveness */
