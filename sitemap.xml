@@ -5,5 +5,24 @@
       <lastmod>2026-02-19</lastmod>
       <priority>1.0</priority>
    </url>
-   <!-- Add other important pages here as they are created -->
+   <url>
+      <loc>https://www.commercialfilmpros.com/services/commercial-window-tinting.html</loc>
+      <lastmod>2026-02-19</lastmod>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://www.commercialfilmpros.com/services/security-film.html</loc>
+      <lastmod>2026-02-19</lastmod>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://www.commercialfilmpros.com/services/privacy-decorative-film.html</loc>
+      <lastmod>2026-02-19</lastmod>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://www.commercialfilmpros.com/services/commercial-graphics-wall-wraps.html</loc>
+      <lastmod>2026-02-19</lastmod>
+      <priority>0.8</priority>
+   </url>
 </urlset>
